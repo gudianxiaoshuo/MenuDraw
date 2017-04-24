@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MenuDraw - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MenuDraw.res" /d "_DEBUG" /d "_AFXDLL" "E:\VC++\单文本文档\菜单绘图\MenuDraw.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA630.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MenuDraw.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\VC++\单文本文档\菜单绘图\MainFrm.cpp"
+"E:\VC++\单文本文档\菜单绘图\MenuDraw.cpp"
+"E:\VC++\单文本文档\菜单绘图\MenuDrawDoc.cpp"
+"E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp"
+"E:\VC++\单文本文档\菜单绘图\SetDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA630.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA631.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MenuDraw.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\VC++\单文本文档\菜单绘图\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA631.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA632.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MenuDraw.pdb" /debug /machine:I386 /out:"Debug/MenuDraw.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MenuDraw.obj"
+".\Debug\MenuDrawDoc.obj"
+".\Debug\MenuDrawView.obj"
+".\Debug\SetDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MenuDraw.res"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA632.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+E:\VC++\单文本文档\菜单绘图\MainFrm.cpp(26) : error C2059: syntax error : '&&'
+E:\VC++\单文本文档\菜单绘图\MainFrm.cpp(26) : error C2143: syntax error : missing ';' before '}'
+E:\VC++\单文本文档\菜单绘图\MainFrm.cpp(26) : error C2143: syntax error : missing ';' before '}'
+E:\VC++\单文本文档\菜单绘图\MainFrm.cpp(27) : error C2143: syntax error : missing ';' before '{'
+E:\VC++\单文本文档\菜单绘图\MainFrm.cpp(27) : error C2447: missing function header (old-style formal list?)
+E:\VC++\单文本文档\菜单绘图\MainFrm.cpp(27) : error C2143: syntax error : missing ';' before '}'
+MenuDraw.cpp
+MenuDrawDoc.cpp
+MenuDrawView.cpp
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(43) : error C2059: syntax error : '&&'
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(43) : error C2143: syntax error : missing ';' before '}'
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(43) : error C2143: syntax error : missing ';' before '}'
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(44) : error C2143: syntax error : missing ';' before '{'
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(44) : error C2447: missing function header (old-style formal list?)
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(44) : error C2143: syntax error : missing ';' before ','
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(45) : error C2143: syntax error : missing ';' before '{'
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(45) : error C2447: missing function header (old-style formal list?)
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(45) : error C2143: syntax error : missing ';' before ','
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(46) : error C2143: syntax error : missing ';' before '{'
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(46) : error C2447: missing function header (old-style formal list?)
+E:\VC++\单文本文档\菜单绘图\MenuDrawView.cpp(46) : error C2143: syntax error : missing ';' before '}'
+SetDlg.cpp
+E:\VC++\单文本文档\菜单绘图\SetDlg.cpp(48) : error C2059: syntax error : '&&'
+E:\VC++\单文本文档\菜单绘图\SetDlg.cpp(48) : error C2143: syntax error : missing ';' before '}'
+E:\VC++\单文本文档\菜单绘图\SetDlg.cpp(48) : error C2143: syntax error : missing ';' before '}'
+E:\VC++\单文本文档\菜单绘图\SetDlg.cpp(49) : error C2143: syntax error : missing ';' before '{'
+E:\VC++\单文本文档\菜单绘图\SetDlg.cpp(49) : error C2447: missing function header (old-style formal list?)
+E:\VC++\单文本文档\菜单绘图\SetDlg.cpp(49) : error C2143: syntax error : missing ';' before '}'
+Generating Code...
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+MenuDraw.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
