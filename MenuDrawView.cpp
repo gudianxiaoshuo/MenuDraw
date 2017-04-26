@@ -58,6 +58,8 @@ CMySDISecondView::CMySDISecondView()
    nBlue=0;
    nGreen=222;
 
+   nBold=3;
+
    m_curRect.SetRect(120,120,200,200);
 
 
@@ -86,7 +88,7 @@ void CMySDISecondView::OnDraw(CDC* pDC)
     pDC->TextOut(100,50,m_Str);
 
     CPen pen;
-	pen.CreatePen(0,6,RGB(123,231,111));
+	pen.CreatePen(0,nBold,m_LineColor);
 
 	CPen* pOldPen=pDC->SelectObject(&pen);
 
@@ -295,14 +297,25 @@ void CMySDISecondView::OnSet()
 {
 	// TODO: Add your command handler code here
 	
-   if(pDlg==NULL)
-   {
-     pDlg=new CSetDlg(this);
-	 pDlg->Create(IDD_DIALOG1);
-	 pDlg->pView=this;
-   }
+  // if(pDlg==NULL)
+  // {
+  //   pDlg=new CSetDlg(this);
+	 //pDlg->Create(IDD_DIALOG1);
+	 //pDlg->pView=this;
+  // }
 
-   pDlg->ShowWindow(SW_SHOW);
+  // pDlg->ShowWindow(SW_SHOW);
+
+	CSetDlg dlg;
+	dlg.m_nBold=nBold;
+	dlg.m_LineColor=m_LineColor;
+	if(dlg.DoModal()==IDOK)
+	{
+		nBold=dlg.m_nBold;
+		m_LineColor=dlg.m_LineColor;
+		Invalidate();
+	}
+
 }
 
 

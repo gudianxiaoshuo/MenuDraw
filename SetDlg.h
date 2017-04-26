@@ -1,3 +1,4 @@
+#include "afxcolorbutton.h"
 #if !defined(AFX_SETDLG_H__C4B64C61_4B7A_4037_B8A3_368E375EA2C5__INCLUDED_)
 #define AFX_SETDLG_H__C4B64C61_4B7A_4037_B8A3_368E375EA2C5__INCLUDED_
 
@@ -18,7 +19,7 @@ public:
 
 // Dialog Data
 	//{{AFX_DATA(CSetDlg)
-	enum { IDD = IDD_DIALOG1 };
+	enum { IDD = IDD_SET_DLG };
 		// NOTE: the ClassWizard will add data members here
 	//}}AFX_DATA
    CMySDISecondView *pView;
@@ -40,6 +41,12 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButton1();
+	int m_nBold;
+	afx_msg void OnBnClickedOk();
+	COLORREF m_LineColor;
+	afx_msg void OnBnClickedMfccolorbutton1();
+	CMFCColorButton m_ColorBtn;
+	virtual BOOL OnInitDialog();
 };
 
 //{{AFX_INSERT_LOCATION}}

@@ -36,6 +36,9 @@ public:
 	CString m_Str;
 
 	BOOL bTransParent;
+
+	COLORREF m_LineColor;
+	int nBold;
 	int nShape;
 
 	BYTE nRed;
