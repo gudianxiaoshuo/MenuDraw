@@ -15,7 +15,7 @@
 #define Ellipse_DRAW 1
 #define Line_DRAW  2
 
-class CSetDlg;
+
 class CMySDISecondView : public CView
 {
 protected: // create from serialization only
@@ -46,6 +46,12 @@ public:
 	BYTE nBlue;
 
 
+public:
+
+	void SetLineColor(COLORREF cor);
+	void SetLineBold(int nBold);
+
+	void Redraw();
 
 // Overrides
 	// ClassWizard generated virtual function overrides

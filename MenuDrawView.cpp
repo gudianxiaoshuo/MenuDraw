@@ -67,6 +67,7 @@ CMySDISecondView::CMySDISecondView()
 
 CMySDISecondView::~CMySDISecondView()
 {
+	delete pDlg;
 }
 
 BOOL CMySDISecondView::PreCreateWindow(CREATESTRUCT& cs)
@@ -297,34 +298,46 @@ void CMySDISecondView::OnSet()
 {
 	// TODO: Add your command handler code here
 	
-  // if(pDlg==NULL)
-  // {
-  //   pDlg=new CSetDlg(this);
-	 //pDlg->Create(IDD_DIALOG1);
-	 //pDlg->pView=this;
-  // }
+   if(pDlg==NULL)
+   {
+     pDlg=new CSetDlg(this);
+	 pDlg->Create(IDD_DIALOG1);
+	
+   }
 
-  // pDlg->ShowWindow(SW_SHOW);
+   pDlg->ShowWindow(SW_SHOW);
 
-	CSetDlg dlg;
-	dlg.m_nBold=nBold;
-	dlg.m_LineColor=m_LineColor;
-	if(dlg.DoModal()==IDOK)
-	{
-		nBold=dlg.m_nBold;
-		m_LineColor=dlg.m_LineColor;
-		Invalidate();
-	}
+
+
+
+	//CSetDlg dlg;
+	//dlg.m_nBold=nBold;
+	//dlg.m_LineColor=m_LineColor;
+	//if(dlg.DoModal()==IDOK)
+	//{
+	//	nBold=dlg.m_nBold;
+	//	m_LineColor=dlg.m_LineColor;
+	//	Invalidate();
+	//}
 
 }
 
+void CMySDISecondView::SetLineColor(COLORREF cor){
 
+	m_LineColor=cor;
+}
 void CMySDISecondView::OnNewBlue()
 {
 	// TODO: 在此添加命令处理程序代码
 }
 
+void CMySDISecondView::SetLineBold(int nBold){
+	this->nBold=nBold;
+}
+void CMySDISecondView::Redraw(){
 
+	Invalidate();
+}
 void CMySDISecondView::OnNewGreen()
 {
 	// TODO: 在此添加命令处理程序代码
