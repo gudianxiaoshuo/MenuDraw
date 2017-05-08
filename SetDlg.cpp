@@ -30,7 +30,7 @@ CSetDlg::CSetDlg(CWnd* pParent /*=NULL*/)
 	//{{AFX_DATA_INIT(CSetDlg)
 		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
-	//pView=(CMenuDrawView* )pParent;
+	pView=(CMySDISecondView* )pParent;
 }
 
 
@@ -75,7 +75,16 @@ void CSetDlg::OnBnClickedOk()
 {
 	// TODO: 在此添加控件通知处理程序代码
 
-	CDialog::OnOK();
+	UpdateData(TRUE);
+
+	if(pView)
+	{
+		pView->SetLineBold(m_nBold);
+		pView->SetLineColor(m_LineColor);
+		pView->Redraw();
+	}
+
+//	CDialog::OnOK();
 }
 
 
